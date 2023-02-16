@@ -1,0 +1,36 @@
+.features__intro {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $primary-500;
+}
+
+.features__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+
+  @media (min-width: $medium) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}
+
+.features__subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @media (min-width: $medium) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.features__description {
+  @media (min-width: $medium) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,15 @@
+.page {
+  font-family: $montserrat;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black;
+  background-color: $white;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  margin: 0;
+}

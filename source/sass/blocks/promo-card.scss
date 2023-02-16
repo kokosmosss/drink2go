@@ -1,0 +1,38 @@
+.promo-card__new {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $primary-500;
+}
+
+.promo-card__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+
+  @media (min-width: $medium) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+}
+
+.promo-card__description {
+  @media (min-width: $medium) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.promo-card__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  color: $primary-500;
+  text-decoration: line-through;
+}
+
+.promo-card__new-price {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
