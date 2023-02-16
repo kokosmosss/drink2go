@@ -25,3 +25,16 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.center-container {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $medium) {
+    width: 728px;
+  }
+
+  @media (min-width: $large) {
+    width: 1220px;
+  }
+}
