@@ -1,42 +1,114 @@
+.promo-card {
+  display: grid;
+  justify-items: center;
+
+  padding: 20px 0 60px;
+
+  @media (min-width: $medium) {
+    padding: 60px 20px;
+  }
+
+  @media (min-width: $large) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    padding: 30px 40px 70px;
+  }
+}
+
 .promo-card--flat-white {
   background-color: $flat-white;
+
+  @media (min-width: $medium) {
+    background-color: none;
+    background-image: linear-gradient(to bottom, $flat-white 640px, $white 640px);
+  }
+
+  @media (min-width: $large) {
+    background-color: $flat-white;
+    background-image: none;
+  }
 }
 
 .promo-card--lavander {
   background-color: $lavander;
+
+  @media (min-width: $medium) {
+    background-color: none;
+    background-image: linear-gradient(to bottom, $lavander 640px, $white 640px);
+  }
+
+  @media (min-width: $large) {
+    background-color: $lavander;
+    background-image: none;
+  }
 }
 
 .promo-card--espresso {
   background-color: $espresso;
+
+  @media (min-width: $medium) {
+    background-color: none;
+    background-image: linear-gradient(to bottom, $espresso 640px, $white 640px);
+  }
+
+  @media (min-width: $large) {
+    background-color: $espresso;
+    background-image: none;
+  }
 }
 
 .promo-card__new {
+  margin-bottom: 4px;
+
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
   color: $primary-500;
+
+  @media (min-width: $medium) {
+    order: -1;
+  }
 }
 
 .promo-card__title {
+  margin: 0;
+
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
 
   @media (min-width: $medium) {
+    margin-bottom: 16px;
+
     font-size: 56px;
     line-height: 80px;
   }
 }
 
 .promo-card__description {
+  margin: 0 0 20px;
+  padding: 0 20px;
+  text-align: center;
+
   @media (min-width: $medium) {
+    padding: 0 60px;
+
     font-size: 20px;
     line-height: 32px;
+  }
+
+  @media (min-width: $large) {
+    margin: 0 0 40px;
+    padding: 0;
+    text-align: start;
   }
 }
 
 .promo-card__old-price {
+  display: block;
+  margin-right: 6px;
+
   font-size: 16px;
   line-height: 32px;
   color: $primary-500;
@@ -44,7 +116,54 @@
 }
 
 .promo-card__new-price {
+  display: block;
+  margin-right: 20px;
+
   font-size: 20px;
   line-height: 32px;
   font-weight: 600;
+}
+
+.promo-card__order-wrapper {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $medium) {
+    margin-bottom: 20px;
+  }
+}
+
+.promo-card__image {
+  @media (min-width: $medium) {
+    width: 476px;
+    height: 476px;
+  }
+
+  @media (min-width: $large) {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.promo-card__picture {
+  @media (min-width: $medium) {
+    order: 1;
+  }
+
+  @media (min-width: $large) {
+    grid-column: 1 / 2;
+  }
+}
+
+.promo-card__flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $large) {
+    grid-column: 2 / 3;
+    grid-row: span 2;
+    align-self: center;
+    align-items: start;
+  }
 }

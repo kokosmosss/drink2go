@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  margin: 0;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: $montserrat;
+  font-size: 16px;
+  line-height: 24px;
+  color: $white;
+  background-color: $primary-500;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover {
+    background-color: $primary-400;
+  }
+
+  &:active {
+    background-color: $primary-600;
+  }
+
+  &:disabled {
+    background-color: $gray-500;
+  }
+}

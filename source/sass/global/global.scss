@@ -27,14 +27,8 @@ img {
 }
 
 .center-container {
-  width: 280px;
-  margin: 0 auto;
-
-  @media (min-width: $medium) {
-    width: 728px;
-  }
-
   @media (min-width: $large) {
-    width: 1220px;
+    max-width: 1220px;
+    margin: 0 auto;
   }
 }

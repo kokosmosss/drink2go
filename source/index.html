@@ -11,14 +11,16 @@
 
 <body class="page__body">
   <header class="page__header header">
+
     <a class="header__logo logo">
       <picture>
-        <source media="(min-width: 1330px)" srcset="img/logo-big.svg">
+        <source media="(min-width: 1300px)" srcset="img/logo-big.svg">
         <source media="(min-width: 768px)" srcset="img/logo-medium.svg">
         <img class="logo__image" src="img/logo-small.svg" width="34" height="36" alt="Логотип Drink to Go.">
       </picture>
+      <span class="logo__text">Интернет-магазин кофейных напитков</span>
     </a>
-    <p class="header__title">Интернет-магазин кофейных напитков</p>
+
     <nav class="header__nav">
       <ul class="nav-list clear-list">
         <li class="nav-list__item">
@@ -43,30 +45,44 @@
         </li>
       </ul>
     </nav>
+
     <ul class="header__user-menu user-menu clear-list">
       <li class="user-menu__item">
         <a class="user-menu__link">
-          Войти
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <use xlink:href="img/icons/stack.svg#user" />
+          </svg>
+          <span class="user-menu__link-text">Войти</span>
         </a>
       </li>
       <li class="user-menu__item">
-        <a class="user-menu__link" href="#">
-          Корзина
+        <a class="user-menu__link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <use xlink:href="img/icons/stack.svg#basket" />
+          </svg>
+          <span class="user-menu__link-text">Корзина</span>
         </a>
       </li>
+      <li class="user-menu__item">
+        <button class="user-menu__toggle" type="button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <use xlink:href="img/icons/stack.svg#burger" />
+          </svg>
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </li>
     </ul>
-    <button class="header__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
+
+
   </header>
   <main class="page__main">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink to Go</h1>
     <section class="page__promo promo">
       <h2 class="visually-hidden">Новинки магазина</h2>
       <ul class="promo__list clear-list">
-        <li class="promo__card promo-card promo-card--flat-white">
-          <div class="promo-card__wrapper center-container">
-            <picture>
+        <li class="promo__card promo__card--flat-white">
+          <div class="promo__card-content promo-card center-container">
+            <picture class="promo-card__picture">
               <source type="image/webp" media="(min-width: 1300px)"
                 srcset="img/promo/decaf-flat-white-desktop.webp 1x, img/promo/decaf-flat-white-desktop@2x.webp 2x">
               <source media="(min-width: 768px)"
@@ -80,34 +96,38 @@
               <img class="promo-card__image" src="img/promo/decaf-flat-white-mobile.png"
                 srcset="img/promo/decaf-flat-white-mobile@2x.png 2x" width="280" height="280" alt="Decaf Flat White">
             </picture>
-            <span class="promo-card__new">Новинка!</span>
-            <h3 class="promo-card__title">Декаф Флэт Уайт</h3>
-            <p class="promo-card__description">
-              Свежесваренный кофе без кофеина из Эфиопии
-              с натуральным фермерским молоком — то, что нужно
-              для расслабления после тяжёлого рабочего дня
-            </p>
-            <span class="promo-card__old-price">295₽</span>
-            <span class="promo-card__new-price">225₽</span>
-            <a class="promo-card__button" href="#">Заказть</a>
+            <div class="promo-card__flex-wrapper">
+              <span class="promo-card__new">Новинка!</span>
+              <h3 class="promo-card__title">Декаф Флэт Уайт</h3>
+              <p class="promo-card__description">
+                Свежесваренный кофе без кофеина из Эфиопии
+                с&nbsp;натуральным фермерским молоком — то, что нужно
+                для&nbsp;расслабления после тяжёлого рабочего дня
+              </p>
+              <div class="promo-card__order-wrapper">
+                <span class="promo-card__old-price">295₽</span>
+                <span class="promo-card__new-price">225₽</span>
+                <a class="promo-card__button button" href="#">Заказать</a>
+              </div>
+            </div>
           </div>
         </li>
         <li class="promo__card promo-card promo-card--lavander">
-          <div class="promo-card__wrapper center-container">
-            <picture>
-              <source type="image/webp" media="(min-width: 1300px)"
-                srcset="img/promo/lavander-latte-desktop.webp 1x, img/promo/lavander-latte-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/promo/lavander-latte-desktop.png 1x, img/promo/lavander-latte-desktop@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/promo/lavander-latte-tablet.webp 1x, img/promo/lavander-latte-tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/promo/lavander-latte-tablet.png 1x, img/promo/lavander-latte-tablet@2x.png 2x">
-              <source type="image/webp"
-                srcset="img/promo/lavander-latte-mobile.webp 1x, img/promo/lavander-latte-mobile@2x.webp 2x">
-              <img class="promo-card__image" src="img/promo/lavander-latte-mobile.png"
-                srcset="img/promo/lavander-latte-mobile@2x.png 2x" width="280" height="280" alt="Lavander Latte">
-            </picture>
+          <picture class="promo-card__picture">
+            <source type="image/webp" media="(min-width: 1300px)"
+              srcset="img/promo/lavander-latte-desktop.webp 1x, img/promo/lavander-latte-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/promo/lavander-latte-desktop.png 1x, img/promo/lavander-latte-desktop@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/promo/lavander-latte-tablet.webp 1x, img/promo/lavander-latte-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/promo/lavander-latte-tablet.png 1x, img/promo/lavander-latte-tablet@2x.png 2x">
+            <source type="image/webp"
+              srcset="img/promo/lavander-latte-mobile.webp 1x, img/promo/lavander-latte-mobile@2x.webp 2x">
+            <img class="promo-card__image" src="img/promo/lavander-latte-mobile.png"
+              srcset="img/promo/lavander-latte-mobile@2x.png 2x" width="280" height="280" alt="Lavander Latte">
+          </picture>
+          <div class="promo-card__flex-wrapper">
             <span class="promo-card__new">Новинка!</span>
             <h3 class="promo-card__title">Лавандовый Латте</h3>
             <p class="promo-card__description">
@@ -115,27 +135,29 @@
               на вершину
               Радужных гор
             </p>
-            <span class="promo-card__old-price">285₽</span>
-            <span class="promo-card__new-price">265₽</span>
-            <a class="promo-card__button" href="#">Заказть</a>
+            <div class="promo-card__order-wrapper">
+              <span class="promo-card__old-price">285₽</span>
+              <span class="promo-card__new-price">265₽</span>
+              <a class="promo-card__button button" href="#">Заказать</a>
+            </div>
           </div>
         </li>
         <li class="promo__card promo-card promo-card--espresso">
-          <div class="promo-card__wrapper center-container">
-            <picture>
-              <source type="image/webp" media="(min-width: 1300px)"
-                srcset="img/promo/triple-espresso-desktop.webp 1x, img/promo/triple-espresso-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/promo/triple-espresso-desktop.png 1x, img/promo/triple-espresso-desktop@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/promo/triple-espresso-tablet.webp 1x, img/promo/triple-espresso-tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/promo/triple-espresso-tablet.png 1x, img/promo/triple-espresso-tablet@2x.png 2x">
-              <source type="image/webp"
-                srcset="img/promo/triple-espresso-mobile.webp 1x, img/promo/triple-espresso-mobile@2x.webp 2x">
-              <img class="promo-card__image" src="img/promo/triple-espresso-mobile.png"
-                srcset="img/promo/triple-espresso-mobile@2x.png 2x" width="280" height="280" alt="Triple Espresso">
-            </picture>
+          <picture class="promo-card__picture ">
+            <source type="image/webp" media="(min-width: 1300px)"
+              srcset="img/promo/triple-espresso-desktop.webp 1x, img/promo/triple-espresso-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/promo/triple-espresso-desktop.png 1x, img/promo/triple-espresso-desktop@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/promo/triple-espresso-tablet.webp 1x, img/promo/triple-espresso-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/promo/triple-espresso-tablet.png 1x, img/promo/triple-espresso-tablet@2x.png 2x">
+            <source type="image/webp"
+              srcset="img/promo/triple-espresso-mobile.webp 1x, img/promo/triple-espresso-mobile@2x.webp 2x">
+            <img class="promo-card__image" src="img/promo/triple-espresso-mobile.png"
+              srcset="img/promo/triple-espresso-mobile@2x.png 2x" width="280" height="280" alt="Triple Espresso">
+          </picture>
+          <div class="promo-card__flex-wrapper">
             <span class="promo-card__new">Новинка!</span>
             <h3 class="promo-card__title">Тройной Эспрессо</h3>
             <p class="promo-card__description">
@@ -144,9 +166,11 @@
               настоящая
               бодрость
             </p>
-            <span class="promo-card__old-price">395₽</span>
-            <span class="promo-card__new-price">375₽</span>
-            <a class="promo-card__button" href="#">Заказть</a>
+            <div class="promo-card__order-wrapper">
+              <span class="promo-card__old-price">395₽</span>
+              <span class="promo-card__new-price">365₽</span>
+              <a class="promo-card__button button" href="#">Заказать</a>
+            </div>
           </div>
         </li>
       </ul>
@@ -405,25 +429,25 @@
     <ul class="footer__social social clear-list">
       <li class="social__item">
         <a class="social__link social__link--vkontakte" href="#">
-          <svg width="27" height="17" viewBox="0 0 27 17" fill="none" aria-hidden="true">
+          <!-- <svg width="27" height="17" viewBox="0 0 27 17" fill="none" aria-hidden="true">
             <use xlink:href="img/sprite.svg#vk" />
-          </svg>
+          </svg> -->
           <span class="visually-hidden">Мы в Вконтакте</span>
         </a>
       </li>
       <li class="social__item">
         <a class="social__link social__link--pinterest" href="#">
-          <svg width="24" height="19" viewBox="0 0 24 19" fill="none" aria-hidden="true">
+          <!-- <svg width="24" height="19" viewBox="0 0 24 19" fill="none" aria-hidden="true">
             <use xlink:href="img/sprite.svg#youtube" />
           </svg>
-          <span class="visually-hidden">Мы в Pinterest</span>
+          <span class="visually-hidden">Мы в Pinterest</span> -->
         </a>
       </li>
       <li class="social__item">
         <a class="social__link social__link--odnoklassniki" href="#">
-          <svg width="20" height="18" viewBox="0 0 20 18" fill="none" aria-hidden="true">
+          <!-- <svg width="20" height="18" viewBox="0 0 20 18" fill="none" aria-hidden="true">
             <use xlink:href="img/sprite.svg#tg" />
-          </svg>
+          </svg> -->
           <span class="visually-hidden">Мы в Одноклассниках</span>
         </a>
       </li>
@@ -486,9 +510,9 @@
       </span>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         HTML Academy
-        <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" fill="none" aria-hidden="true">
+        <!-- <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" fill="none" aria-hidden="true">
           <use xlink:href="img/sprite.svg#copyright" />
-        </svg>
+        </svg> -->
       </a>
     </div>
   </footer>

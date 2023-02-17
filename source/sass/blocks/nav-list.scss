@@ -1,7 +1,37 @@
+.nav-list {
+  @media (min-width: $medium) {
+    display: flex;
+  }
+}
+
 .nav-list__link {
+  display: block;
+  padding: 20px 100px 21px;
+
   font-size: 12px;
   line-height: 16px;
   text-decoration: none;
   text-transform: uppercase;
   color: $black;
+  text-align: center;
+
+  @media (min-width: $medium) {
+    padding: 32px 20px;
+  }
+}
+
+.nav-list__item {
+  @media (max-width: ($medium - 1px)) {
+    border-bottom: 1px solid $secondary;
+
+    &:first-child {
+      border-top: 1px solid $secondary;
+    }
+  }
+}
+
+.nav-list__link--current {
+  @media (min-width: $medium) {
+    border-bottom: 2px solid $primary-500;
+  }
 }

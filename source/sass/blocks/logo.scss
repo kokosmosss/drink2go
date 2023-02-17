@@ -1,0 +1,38 @@
+.logo {
+  display: block;
+  padding: 12px 20px 0;
+
+  @media (min-width: $medium) {
+    padding: 20px 0 0;
+  }
+
+  @media (min-width: $large) {
+    display: flex;
+    padding: 22px 0 0;
+  }
+}
+
+.logo__image {
+  @media (min-width: $medium) {
+    width: 82px;
+    height: 36px;
+  }
+
+  @media (min-width: $large) {
+    width: 170px;
+  }
+}
+
+.logo__text {
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (max-width: ($large - 1px)) {
+    display: none;
+  }
+
+  @media (min-width: $large) {
+    margin-left: 20px;
+    max-width: 126px;
+  }
+}
