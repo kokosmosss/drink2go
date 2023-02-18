@@ -1,0 +1,41 @@
+.promo__card--flat-white {
+  background-color: $flat-white;
+
+  @media (min-width: $medium) {
+    background-color: none;
+    background-image: linear-gradient(to bottom, $flat-white 640px, $white 640px);
+  }
+
+  @media (min-width: $large) {
+    background-color: $flat-white;
+    background-image: none;
+  }
+}
+
+.promo__card--lavander {
+  background-color: $lavander;
+
+  @media (min-width: $medium) {
+    background-color: none;
+    background-image: linear-gradient(to bottom, $lavander 640px, $white 640px);
+  }
+
+  @media (min-width: $large) {
+    background-color: $lavander;
+    background-image: none;
+  }
+}
+
+.promo__card--espresso {
+  background-color: $espresso;
+
+  @media (min-width: $medium) {
+    background-color: none;
+    background-image: linear-gradient(to bottom, $espresso 640px, $white 640px);
+  }
+
+  @media (min-width: $large) {
+    background-color: $espresso;
+    background-image: none;
+  }
+}

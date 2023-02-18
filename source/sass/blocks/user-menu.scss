@@ -12,6 +12,7 @@
   place-content: center;
   width: 60px;
   height: 60px;
+  cursor: pointer;
 
   font-size: 12px;
   line-height: 16px;
@@ -28,6 +29,19 @@
     place-content: center;
     grid-template-columns: min-content min-content;
     column-gap: 8px;
+  }
+
+  &:hover {
+    color: $primary-500;
+  }
+
+  &:focus,
+  &:active {
+    background-color: $secondary;
+
+    @media (max-width: ($medium - 1px)) {
+      color: $black;
+    }
   }
 }
 
@@ -55,5 +69,11 @@
 
   @media (min-width: $medium) {
     display: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $secondary;
   }
 }

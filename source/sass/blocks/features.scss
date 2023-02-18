@@ -1,23 +1,41 @@
-.features__intro {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: $primary-500;
+.features {
+  padding: 50px 20px 60px;
+
+  @media (min-width: $medium) {
+    padding: 60px 30px 100px;
+  }
+
+  @media (min-width: $large) {
+    padding: 100px 40px 96px;
+  }
+}
+
+.features__bange {
+  margin-bottom: 4px;
 }
 
 .features__title {
+  margin: 0 0 36px;
+
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
+  text-align: center;
 
   @media (min-width: $medium) {
     font-size: 42px;
     line-height: 64px;
   }
+
+  @media (min-width: $large) {
+    margin: 0 0 40px;
+  }
 }
 
 .features__subtitle {
+  margin: 0 0 4px;
+  text-align: center;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
@@ -25,12 +43,82 @@
   @media (min-width: $medium) {
     font-size: 24px;
     line-height: 36px;
+    text-align: start;
   }
+
+    @media (min-width: $large) {
+      text-align: center;
+    }
 }
 
 .features__description {
+  margin: 0;
+  text-align: center;
+
   @media (min-width: $medium) {
     font-size: 16px;
     line-height: 24px;
+    text-align: start;
   }
+
+    @media (min-width: $large) {
+      text-align: center;
+    }
+}
+
+.features__list {
+  @media (min-width: $medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+
+  @media (min-width: $large) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.features__item {
+  padding-top: 52px;
+
+  background-size: 52px 56px;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @media (min-width: $medium) {
+    padding-top: 0;
+    padding-left: 72px;
+    background-position: top left;
+  }
+
+    @media (min-width: $large) {
+      padding-top: 72px;
+      padding-left: 0;
+      background-position: top center;
+    }
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+
+    @media (min-width: $medium) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.features__item--time {
+  background-image: url("../../img/icons/stack.svg#time");
+}
+
+.features__item--panel {
+  background-image: url("../../img/icons/stack.svg#panel");
+}
+
+.features__item--light {
+  background-image: url("../../img/icons/stack.svg#light");
+}
+
+.features__item--leaf {
+  background-image: url("../../img/icons/stack.svg#leaf");
 }

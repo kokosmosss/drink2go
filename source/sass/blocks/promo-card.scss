@@ -2,7 +2,7 @@
   display: grid;
   justify-items: center;
 
-  padding: 20px 0 60px;
+  padding: 20px 20px 60px;
 
   @media (min-width: $medium) {
     padding: 60px 20px;
@@ -15,56 +15,10 @@
   }
 }
 
-.promo-card--flat-white {
-  background-color: $flat-white;
 
-  @media (min-width: $medium) {
-    background-color: none;
-    background-image: linear-gradient(to bottom, $flat-white 640px, $white 640px);
-  }
 
-  @media (min-width: $large) {
-    background-color: $flat-white;
-    background-image: none;
-  }
-}
-
-.promo-card--lavander {
-  background-color: $lavander;
-
-  @media (min-width: $medium) {
-    background-color: none;
-    background-image: linear-gradient(to bottom, $lavander 640px, $white 640px);
-  }
-
-  @media (min-width: $large) {
-    background-color: $lavander;
-    background-image: none;
-  }
-}
-
-.promo-card--espresso {
-  background-color: $espresso;
-
-  @media (min-width: $medium) {
-    background-color: none;
-    background-image: linear-gradient(to bottom, $espresso 640px, $white 640px);
-  }
-
-  @media (min-width: $large) {
-    background-color: $espresso;
-    background-image: none;
-  }
-}
-
-.promo-card__new {
+.promo-card__bange {
   margin-bottom: 4px;
-
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: $primary-500;
 
   @media (min-width: $medium) {
     order: -1;
@@ -77,6 +31,7 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 48px;
+  text-align: center;
 
   @media (min-width: $medium) {
     margin-bottom: 16px;
@@ -84,11 +39,14 @@
     font-size: 56px;
     line-height: 80px;
   }
+
+  @media (min-width: $large) {
+    text-align: start;
+  }
 }
 
 .promo-card__description {
   margin: 0 0 20px;
-  padding: 0 20px;
   text-align: center;
 
   @media (min-width: $medium) {

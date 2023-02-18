@@ -1,4 +1,46 @@
+.control {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
 .control__label {
   font-size: 16px;
   line-height: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid $grey-500;
+    border-radius: 50%;
+  }
+}
+
+.control__input:checked+.control__label::before {
+  border-color: $primary-500;
+}
+
+.control__input {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  opacity: 0;
+  z-index: 2;
+}
+
+.control__input:checked+.control__label::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $primary-500;
+  position: absolute;
+  left: 4px;
+  top: 5px;
 }

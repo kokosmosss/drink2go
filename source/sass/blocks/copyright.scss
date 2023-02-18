@@ -1,0 +1,32 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 30px;
+}
+
+.copyright__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: $grey-500;
+}
+
+.copyright__link {
+  display: flex;
+  font-size: 12px;
+  line-height: 16px;
+  color: $grey-500;
+  text-decoration: none;
+
+  svg {
+    margin-left: 4px;
+  }
+
+  &:hover {
+    color: $primary-400;
+  }
+
+  &:focus,
+  &:active {
+    color: $primary-600;
+  }
+}

@@ -1,4 +1,16 @@
+.menu {
+  padding: 20px 20px 8px;
+  border-bottom: 1px solid $secondary;
+
+  @media (min-width: $medium) {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
 .menu__title {
+  margin: 0 0 20px;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
@@ -6,9 +18,50 @@
 }
 
 .menu__link {
+  display: block;
+  margin-bottom: 20px;
+
   font-size: 12px;
   line-height: 16px;
   text-decoration: none;
   text-transform: uppercase;
   color: $black;
+
+  &:hover {
+    color: $primary-400;
+  }
+
+  &:focus,
+  &:active {
+    color: $primary-600;
+  }
+}
+
+.menu__address {
+  margin-bottom: 16px;
+  padding-left: 19px;
+
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+  color: $black;
+
+  background-image: url("../../img/icons/stack.svg#point");
+  background-repeat: no-repeat;
+  background-size: 13px 16px;
+}
+
+.menu__tel {
+  display: block;
+  padding-left: 19px;
+  margin-bottom: 14px;
+
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: $black;
+
+  background-image: url("../../img/icons/stack.svg#tel");
+  background-repeat: no-repeat;
+  background-size: 13px 16px;
 }

@@ -1,4 +1,4 @@
-.logo {
+.header__logo.logo {
   display: block;
   padding: 12px 20px 0;
 
@@ -21,9 +21,16 @@
   @media (min-width: $large) {
     width: 170px;
   }
+
+  .footer__logo & {
+    @media (min-width: $medium) {
+      width: 170px;
+    }
+  }
 }
 
 .logo__text {
+  display: block;
   font-size: 12px;
   line-height: 16px;
 
@@ -31,8 +38,16 @@
     display: none;
   }
 
-  @media (min-width: $large) {
-    margin-left: 20px;
-    max-width: 126px;
+  .header__logo & {
+    @media (min-width: $large) {
+      margin-left: 20px;
+      max-width: 126px;
+    }
+  }
+
+  .footer__logo & {
+    @media (min-width: $large) {
+      margin-top: 10px;
+    }
   }
 }

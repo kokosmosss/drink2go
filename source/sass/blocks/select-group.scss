@@ -1,0 +1,42 @@
+.select-group__title {
+  margin: 0 18px 0 0;
+  padding: 0;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.select-group__select {
+  max-width: 165px;
+  margin: 0;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  appearance: none;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $primary-500;
+
+  background-color: transparent;
+  background-image: url("../../img/icons/stack.svg#arrow-down");
+  background-size: 10px 6px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+
+  &:hover {
+    background-color: $secondary;
+  }
+
+  &:active,
+  &:focus {
+    background-image: url("../../img/icons/stack.svg#arrow-up");
+    outline: none;
+    border: none;
+  }
+}
+
+
