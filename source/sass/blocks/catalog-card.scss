@@ -1,21 +1,36 @@
 .catalog-card {
-  padding: 40px 21px 20px;
+  padding: 35px 21px 20px;
   border-radius: 4px;
   background-color: $white;
 
   @media (min-width: $medium) {
-    padding: 50px 31px 30px;
+    padding: 50px 31px 29px;
   }
 }
 
+.catalog-card__link {
+  color: $black;
+}
+
 .catalog-card__title {
+  margin: 0 0 4px;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
 
   @media (min-width: $medium) {
+    margin: 0 0 10px;
     font-size: 24px;
     line-height: 36px;
+  }
+}
+
+.catalog-card__description {
+  margin: 0 0 16px;
+
+  @media (min-width: $medium) {
+    margin: 0 0 20px;
   }
 }
 
@@ -28,9 +43,15 @@
 .catalog-card__picture {
   display: flex;
   justify-content: center;
+  margin-bottom: 23px;
+
+  @media (min-width: $medium) {
+    margin-bottom: 31px;
+  }
 }
 
 .catalog-card__price-group {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }

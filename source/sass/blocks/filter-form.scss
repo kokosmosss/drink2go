@@ -1,8 +1,8 @@
 .filter-form__group-wrapper {
   @media (min-width: $medium) {
     display: grid;
-    grid-template-columns: 220px max-content max-content;
-    justify-content: space-between;
+    grid-template-columns: 226px 220px 220px;
+    column-gap: 20px;
   }
 
   @media (min-width: $large) {
@@ -11,24 +11,29 @@
 }
 
 .filter-form__title {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   padding: 0;
 
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
 
-  @media (min-width: $large) {
+  @media (min-width: $medium) {
     margin-bottom: 20px;
   }
 }
 
 .filter-form__group {
-  margin: 0 0 20px;
+  margin: 0 0 25px;
   padding: 0;
   border: 0;
 
+  @media (min-width: $medium) {
+    padding-left: 5px;
+  }
+
   @media (min-width: $large) {
+    padding-left: 0;
     margin: 0 0 30px;
   }
 }
@@ -46,21 +51,27 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  margin: 13px 0 40px;
+  margin: 0 0 40px;
+  padding-top: 5px;
 
   @media (min-width: $medium) {
     flex-direction: row;
     justify-content: center;
-    margin: 18px 0 44px;
+    gap: 30px;
+    padding-top: 10px;
+    margin: 0 0 37px;
   }
 
   @media (min-width: $large) {
-    margin: 20px 0 0;
+    margin: 0;
+    padding-top: 0;
   }
 }
 
 .filter-form__button {
-  width: 160px;
+  @media (max-width: ($medium - 1px)) {
+    width: 160px;
+  }
 }
 
 .filter-form__select-group {
@@ -71,7 +82,7 @@
 
   @media (min-width: $medium) {
     justify-content: flex-end;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: $large) {
@@ -84,4 +95,8 @@
 
 .filter-form__range {
   padding-top: 12px;
+
+  @media (min-width: $medium) {
+    padding-top: 10px;
+  }
 }

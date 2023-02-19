@@ -2,11 +2,11 @@
   padding: 50px 20px 60px;
 
   @media (min-width: $medium) {
-    padding: 60px 30px 100px;
+    padding: 50px 30px 100px;
   }
 
   @media (min-width: $large) {
-    padding: 100px 40px 96px;
+    padding: 100px 40px 92px;
   }
 }
 
@@ -23,12 +23,13 @@
   text-align: center;
 
   @media (min-width: $medium) {
+    margin: 0 0 60px;
     font-size: 42px;
     line-height: 64px;
   }
 
   @media (min-width: $large) {
-    margin: 0 0 40px;
+    margin: 0 0 80px;
   }
 }
 
@@ -41,6 +42,7 @@
   line-height: 32px;
 
   @media (min-width: $medium) {
+    margin: 0 0 10px;
     font-size: 24px;
     line-height: 36px;
     text-align: start;
@@ -80,7 +82,7 @@
 }
 
 .features__item {
-  padding-top: 52px;
+  padding-top: 65px;
 
   background-size: 52px 56px;
   background-repeat: no-repeat;
@@ -93,13 +95,13 @@
   }
 
     @media (min-width: $large) {
-      padding-top: 72px;
+      padding-top: 78px;
       padding-left: 0;
       background-position: top center;
     }
 
   &:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 33px;
 
     @media (min-width: $medium) {
       margin-bottom: 0;

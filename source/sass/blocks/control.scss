@@ -22,9 +22,27 @@
   }
 }
 
+.control__input:not(.control__input:disabled):hover+.control__label::before,
+.control__input:not(.control__input:disabled):focus+.control__label::before {
+  border-color: $primary-400;
+}
+
+.control__input:disabled+.control__label::before {
+  border-color: $grey-400;
+}
+
+.control__input:disabled+.control__label {
+  color: $grey-400;
+}
+
 .control__input:checked+.control__label::before {
   border-color: $primary-500;
 }
+
+.control__input:disabled+.control__label::before {
+  border-color: $grey-400;
+}
+
 
 .control__input {
   width: 24px;
@@ -43,4 +61,8 @@
   position: absolute;
   left: 4px;
   top: 5px;
+}
+
+.control__input:disabled:checked+.control__label::after {
+  background-color: $grey-400;
 }

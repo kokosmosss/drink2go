@@ -10,7 +10,6 @@
   font-size: 16px;
   line-height: 24px;
   color: $white;
-  text-decoration: none;
   text-align: center;
 
   background-color: $primary-500;
@@ -32,6 +31,10 @@
 .button--submit {
   padding: 10px 14px;
   font-size: 13px;
+
+  @media (min-width: $medium) {
+    padding: 8px 4px;
+  }
 
   @media (min-width: $large) {
     padding: 10px 8px;

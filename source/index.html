@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <title>Интернет-магазин кофейных напитков Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin="" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/montserrat-400.woff2" type="woff/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
-  <header class="page__header header">
-
+  <header class="page__header header header--closed header--no-js">
     <a class="header__logo logo">
       <picture>
         <source media="(min-width: 1300px)" srcset="img/logo-big.svg">
@@ -65,22 +67,18 @@
       </li>
       <li class="user-menu__item">
         <button class="user-menu__toggle" type="button">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <use xlink:href="img/icons/stack.svg#burger" />
-          </svg>
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </li>
     </ul>
-
-
   </header>
   <main class="page__main">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink to Go</h1>
-    <section class="page__promo promo">
+
+    <section class="page__promo promo swiper">
       <h2 class="visually-hidden">Новинки магазина</h2>
-      <ul class="promo__list clear-list">
-        <li class="promo__card promo__card--flat-white">
+      <ul class="promo__list swiper-wrapper clear-list">
+        <li class="promo__card promo__card--flat-white swiper-slide">
           <div class="promo__card-content promo-card center-container">
             <picture class="promo-card__picture">
               <source type="image/webp" media="(min-width: 1300px)"
@@ -112,7 +110,7 @@
             </div>
           </div>
         </li>
-        <li class="promo__card promo__card--lavander">
+        <li class="promo__card promo__card--lavander swiper-slide">
           <div class="promo__card-content promo-card center-container">
             <picture class="promo-card__picture">
               <source type="image/webp" media="(min-width: 1300px)"
@@ -145,9 +143,9 @@
             </div>
           </div>
         </li>
-        <li class="promo__card promo__card--espresso">
+        <li class="promo__card promo__card--espresso swiper-slide">
           <div class="promo__card-content promo-card center-container">
-            <picture class="promo-card__picture ">
+            <picture class="promo-card__picture">
               <source type="image/webp" media="(min-width: 1300px)"
                 srcset="img/promo/triple-espresso-desktop.webp 1x, img/promo/triple-espresso-desktop@2x.webp 2x">
               <source media="(min-width: 768px)"
@@ -179,7 +177,15 @@
           </div>
         </li>
       </ul>
+      <button class="promo__button swiper-button-prev" type="button">
+        <span class="visually-hidden">Предыдущий слайд</span>
+      </button>
+      <button class="promo__button swiper-button-next" type="button">
+        <span class="visually-hidden">Следующий слайд</span>
+      </button>
+      <div class="promo__pagination swiper-pagination"></div>
     </section>
+
     <section class="page__features features center-container">
       <span class="features__bange bange">Преимущества</span>
       <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
@@ -193,7 +199,7 @@
         <li class="features__item features__item--panel">
           <h3 class="features__subtitle">Удобство</h3>
           <p class="features__description">
-            Легко помещается и в карман,
+            Легко помещается и в карман,<br>
             и в маленькую сумочку
           </p>
         </li>
@@ -207,16 +213,17 @@
           <h3 class="features__subtitle">Экологичность</h3>
           <p class="features__description">
             Вся упаковка сделана
-            из перерабатываемых материалов
+            из&nbsp;перерабатываемых материалов
           </p>
         </li>
       </ul>
     </section>
+
     <section class="page__catalog catalog">
       <div class="catalog__wrapper center-container">
         <span class="catalog__bange bange">Каталог</span>
         <h2 class="catalog__title">Каталог кофейных напитков</h2>
-        <form class="catalog__filter-form filter-form">
+        <form class="catalog__filter-form filter-form" action="https://echo.htmlacademy.ru" method="POST">
           <h3 class="visually-hidden">Форма фильтрации продукции</h3>
           <div class="filter-form__group-wrapper">
             <fieldset class="filter-form__group">
@@ -246,7 +253,7 @@
                 <label class="control__label" for="whatever">Неважно</label>
               </p>
               <p class="filter-form__area control">
-                <input class="control__input" type="radio" id="animal" name="milk-type" value="animal">
+                <input class="control__input" type="radio" id="animal" name="milk-type" value="animal" checked disabled>
                 <label class="control__label" for="animal">Только животное</label>
               </p>
               <p class="filter-form__area control">
@@ -254,7 +261,7 @@
                 <label class="control__label" for="plant">Только растительное</label>
               </p>
               <p class="filter-form__area control">
-                <input class="control__input" type="radio" id="no-milk" name="milk-type" value="no-milk">
+                <input class="control__input" type="radio" id="no-milk" name="milk-type" value="no-milk" disabled>
                 <label class="control__label" for="no-milk">Без молока</label>
               </p>
             </fieldset>
@@ -277,7 +284,7 @@
                 <label class="control-switch__label" for="costa-rica">Коста-Рика</label>
               </p>
               <p class="filter-form__area control-switch">
-                <input class="control-switch__input" type="checkbox" id="peru" name="peru">
+                <input class="control-switch__input" type="checkbox" id="peru" name="peru" disabled>
                 <label class="control-switch__label" for="peru">Перу</label>
               </p>
             </fieldset>
@@ -289,7 +296,7 @@
           <div class="filter-form__select-group select-group">
             <label class="select-group__title" for="sort">Сортировка:</label>
             <select class="select-group__select" name="sort" id="sort">
-              <option class="select-group__option" value="default" selected>по умолчанию</option>
+              <option class="select-group__option" value="default" selected disabled>по умолчанию</option>
               <option class="select-group__option" value="expensive">сначала дорогие</option>
               <option class="select-group__option" value="cheap">сначала дешёвые</option>
               <option class="select-group__option" value="high-rate">высокий рейтинг</option>
@@ -298,14 +305,16 @@
         </form>
         <ul class="catalog__list clear-list">
           <li class="catalog__item catalog-card">
-            <picture class="catalog-card__picture">
-              <source type="image/webp"
-                srcset="img/catalog/specialty-coffee-white.webp 1x, img/catalog/specialty-coffee-white@2x.webp 2x">
-              <img class="catalog-card__image" src="img/catalog/specialty-coffee-white.png"
-                srcset="img/catalog/specialty-coffee-white@2x.png 2x" width="130" height="188"
-                alt="Specialty Coffee White">
-            </picture>
-            <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            <a class="catalog-card__link" href="#">
+              <picture class="catalog-card__picture">
+                <source type="image/webp"
+                  srcset="img/catalog/specialty-coffee-white.webp 1x, img/catalog/specialty-coffee-white@2x.webp 2x">
+                <img class="catalog-card__image" src="img/catalog/specialty-coffee-white.png"
+                  srcset="img/catalog/specialty-coffee-white@2x.png 2x" width="130" height="188"
+                  alt="Specialty Coffee White">
+              </picture>
+              <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="catalog-card__description">
               Кофе без кофеина из Эфиопии
               с&nbsp;натуральным фермерским молоком
@@ -316,14 +325,16 @@
             </div>
           </li>
           <li class="catalog__item catalog-card">
-            <picture class="catalog-card__picture">
-              <source type="image/webp"
-                srcset="img/catalog/specialty-coffee-violet.webp 1x, img/catalog/specialty-coffee-violet@2x.webp 2x">
-              <img class="catalog-card__image" src="img/catalog/specialty-coffee-violet.png"
-                srcset="img/catalog/specialty-coffee-violet@2x.png 2x" width="130" height="188"
-                alt="Specialty Coffee Violet">
-            </picture>
-            <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            <a class="catalog-card__link" href="#">
+              <picture class="catalog-card__picture">
+                <source type="image/webp"
+                  srcset="img/catalog/specialty-coffee-violet.webp 1x, img/catalog/specialty-coffee-violet@2x.webp 2x">
+                <img class="catalog-card__image" src="img/catalog/specialty-coffee-violet.png"
+                  srcset="img/catalog/specialty-coffee-violet@2x.png 2x" width="130" height="188"
+                  alt="Specialty Coffee Violet">
+              </picture>
+              <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="catalog-card__description">
               Кофе без кофеина из Эфиопии
               с&nbsp;натуральным фермерским молоком
@@ -334,14 +345,16 @@
             </div>
           </li>
           <li class="catalog__item catalog-card">
-            <picture class="catalog-card__picture">
-              <source type="image/webp"
-                srcset="img/catalog/specialty-coffee-black.webp 1x, img/catalog/specialty-coffee-black@2x.webp 2x">
-              <img class="catalog-card__image" src="img/catalog/specialty-coffee-white.png"
-                srcset="img/catalog/specialty-coffee-black@2x.png 2x" width="130" height="188"
-                alt="Specialty Coffee Black">
-            </picture class="catalog-card__picture">
-            <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            <a class="catalog-card__link" href="#">
+              <picture class="catalog-card__picture">
+                <source type="image/webp"
+                  srcset="img/catalog/specialty-coffee-black.webp 1x, img/catalog/specialty-coffee-black@2x.webp 2x">
+                <img class="catalog-card__image" src="img/catalog/specialty-coffee-white.png"
+                  srcset="img/catalog/specialty-coffee-black@2x.png 2x" width="130" height="188"
+                  alt="Specialty Coffee Black">
+              </picture class="catalog-card__picture">
+              <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="catalog-card__description">
               Кофе без кофеина из Эфиопии
               с&nbsp;натуральным фермерским молоком
@@ -352,14 +365,16 @@
             </div>
           </li>
           <li class="catalog__item catalog-card">
-            <picture class="catalog-card__picture">
-              <source type="image/webp"
-                srcset="img/catalog/specialty-coffee-purple.webp 1x, img/catalog/specialty-coffee-purple@2x.webp 2x">
-              <img class="catalog-card__image" src="img/catalog/specialty-coffee-purple.png"
-                srcset="img/catalog/specialty-coffee-purple@2x.png 2x" width="130" height="188"
-                alt="Specialty Coffee Purple">
-            </picture>
-            <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            <a class="catalog-card__link" href="#">
+              <picture class="catalog-card__picture">
+                <source type="image/webp"
+                  srcset="img/catalog/specialty-coffee-purple.webp 1x, img/catalog/specialty-coffee-purple@2x.webp 2x">
+                <img class="catalog-card__image" src="img/catalog/specialty-coffee-purple.png"
+                  srcset="img/catalog/specialty-coffee-purple@2x.png 2x" width="130" height="188"
+                  alt="Specialty Coffee Purple">
+              </picture>
+              <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="catalog-card__description">
               Кофе без кофеина из Эфиопии
               с&nbsp;натуральным фермерским молоком
@@ -370,14 +385,16 @@
             </div>
           </li>
           <li class="catalog__item catalog-card">
-            <picture class="catalog-card__picture">
-              <source type="image/webp"
-                srcset="img/catalog/specialty-coffee-brown.webp 1x, img/catalog/specialty-coffee-brown@2x.webp 2x">
-              <img class="catalog-card__image" src="img/catalog/specialty-coffee-brown.png"
-                srcset="img/catalog/specialty-coffee-brown@2x.png 2x" width="130" height="188"
-                alt="Specialty Coffee Brown">
-            </picture>
-            <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            <a class="catalog-card__link" href="#">
+              <picture class="catalog-card__picture">
+                <source type="image/webp"
+                  srcset="img/catalog/specialty-coffee-brown.webp 1x, img/catalog/specialty-coffee-brown@2x.webp 2x">
+                <img class="catalog-card__image" src="img/catalog/specialty-coffee-brown.png"
+                  srcset="img/catalog/specialty-coffee-brown@2x.png 2x" width="130" height="188"
+                  alt="Specialty Coffee Brown">
+              </picture>
+              <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="catalog-card__description">
               Кофе без кофеина из Эфиопии
               с&nbsp;натуральным фермерским молоком
@@ -388,14 +405,16 @@
             </div>
           </li>
           <li class="catalog__item catalog-card">
-            <picture class="catalog-card__picture">
-              <source type="image/webp"
-                srcset="img/catalog/specialty-coffee-yellow.webp 1x, img/catalog/specialty-coffee-yellow@2x.webp 2x">
-              <img class="catalog-card__image" src="img/catalog/specialty-coffee-yellow.png"
-                srcset="img/catalog/specialty-coffee-yellow@2x.png 2x" width="130" height="188"
-                alt="Specialty Coffee Yellow">
-            </picture>
-            <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            <a class="catalog-card__link" href="#">
+              <picture class="catalog-card__picture">
+                <source type="image/webp"
+                  srcset="img/catalog/specialty-coffee-yellow.webp 1x, img/catalog/specialty-coffee-yellow@2x.webp 2x">
+                <img class="catalog-card__image" src="img/catalog/specialty-coffee-yellow.png"
+                  srcset="img/catalog/specialty-coffee-yellow@2x.png 2x" width="130" height="188"
+                  alt="Specialty Coffee Yellow">
+              </picture>
+              <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
+            </a>
             <p class="catalog-card__description">
               Кофе без кофеина из Эфиопии
               снатуральным фермерским молоком
@@ -439,17 +458,8 @@
         </ul>
       </div>
     </section>
-    <section class="page__map map">
+    <section class="page__map map map--no-js" id="map">
       <h2 class="visually-hidden">Местонахождение магазина на карте</h2>
-      <picture>
-        <source type="image/webp" media="(min-width: 1300px)" srcset="img/map-desktop.webp">
-        <source media="(min-width: 1300px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp">
-        <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
-        <source type="image/webp" srcset="img/map-mobile.webp">
-        <img class="map__image" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" loading="lazy" width="320"
-          height="420" alt="Карта расположения магазина Drink to Go.">
-      </picture>
     </section>
   </main>
   <footer class="page__footer footer">
@@ -488,6 +498,7 @@
         </li>
       </ul>
     </div>
+
     <div class="footer__menu-wrapper">
       <section class="footer__menu menu">
         <h3 class="menu__title">Интернет-магазин</h3>
@@ -542,6 +553,7 @@
         <a class="menu__tel" href="tel:+79999999999" class="contacts__phone">+7 (999) 999-99-99</a>
       </section>
     </div>
+
     <div class="footer__copyright copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         Разработано в HTML Academy
@@ -551,6 +563,8 @@
       </a>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
   <script src="./js/script.js" defer></script>
 </body>
 

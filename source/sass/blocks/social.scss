@@ -7,8 +7,9 @@
 .social__link {
   display: grid;
   place-content: center;
-  width: 40px;
+  width: 48px;
   height: 40px;
+  padding-bottom: 4px;
   border-radius: 4px;
   color: $grey-500;
 

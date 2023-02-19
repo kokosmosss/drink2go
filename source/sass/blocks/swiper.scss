@@ -1,0 +1,124 @@
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 23px;
+  bottom: 0;
+  height: 100%;
+  width: 20px;
+  border: none;
+  z-index: 2;
+  color: $primary-500;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: $medium) {
+    width: 80px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 343px;
+
+    width: 13px;
+    height: 13px;
+    border-top: 2px solid $primary-500;
+    border-right: 2px solid $primary-500;
+  }
+
+  @media (min-width: $medium) {
+    &::after {
+      top: 335px;
+    }
+  }
+
+  @media (min-width: $large) {
+    &::after {
+      top: 373px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+  }
+
+  &:active {
+    background-image:
+      linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    background-color: transparent;
+
+    &::after {
+      border-color: $grey-500;
+    }
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+
+  &::after {
+    left: 7px;
+    transform: rotate(226deg);
+  }
+
+  @media (min-width: $medium) {
+    &::after {
+      left: 38px;
+    }
+  }
+}
+
+.swiper-button-next {
+  right: 0;
+
+  &::after {
+    right: 7px;
+    transform: rotate(46deg);
+  }
+
+  @media (min-width: $medium) {
+    &::after {
+      right: 38px;
+    }
+  }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets {
+  @media (max-width: ($large - 1px)) {
+    display: none;
+  }
+
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  bottom: 70px;
+}
+
+.swiper-pagination-bullet {
+
+  &:hover,
+  &:focus {
+    color: $primary-700;
+  }
+
+  &:active {
+    color: $primary-500;
+  }
+
+  @media (min-width: $large) {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: $white;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $primary-500;
+  border-radius: 0;
+}

@@ -47,7 +47,9 @@
 
   .footer__logo & {
     @media (min-width: $large) {
-      margin-top: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 5px;
     }
   }
 }

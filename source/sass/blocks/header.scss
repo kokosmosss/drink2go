@@ -14,7 +14,44 @@
 
 .header__nav {
   @media (max-width: ($medium - 1px)) {
+    position: absolute;
+    top: 60px;
     width: 100%;
     order: 2;
+    background-color: $white;
+    z-index: 2;
+  }
+}
+
+.header__user-menu {
+  @media (min-width: $large) {
+    min-width: 241px;
+    gap: 20px;
+  }
+}
+
+// без js = кнопки нет, меню открыто в потоке
+.header--no-js .header__nav {
+  position: static;
+}
+
+.header--no-js .user-menu__toggle {
+  display: none;
+}
+
+// js должен убирать header--closed и добавлять к кнопке user-menu__toggle--close = меню открыто + кнопка-крестик показана
+// при закрытом меню кнопка-крестик скрыта
+.header--closed .user-menu__toggle--close {
+  display: none;
+}
+
+// при закрытом меню кнопка-бургер показана
+@media (max-width: ($medium - 1px)) {
+  .header--closed:not(.header--no-js) .user-menu__toggle {
+    display: block;
+  }
+
+  .header--closed:not(.header--no-js) .header__nav {
+    display: none;
   }
 }

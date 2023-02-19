@@ -16,7 +16,6 @@
 
   font-size: 12px;
   line-height: 16px;
-  text-decoration: none;
   text-transform: uppercase;
   color: $black;
 
@@ -49,15 +48,10 @@
   @media (max-width: ($large - 1px)) {
     display: none;
   }
-
-  // @media (min-width: $large) {
-  //   display: block;
-  //   margin: auto 0;
-  // }
 }
 
 .user-menu__toggle {
-  display: block;
+  position: relative;
 
   width: 60px;
   height: 60px;
@@ -75,5 +69,41 @@
   &:focus,
   &:active {
     background-color: $secondary;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 22px;
+    height: 1.5px;
+    width: 16px;
+
+    background-color: $black;
+    box-shadow: 0 5px 0 0 $black, 0 10px 0 0 $black;
+  }
+}
+
+.user-menu__toggle--close {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 29px;
+    right: 21px;
+    width: 17px;
+    height: 2px;
+
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    box-shadow: none;
   }
 }

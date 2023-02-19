@@ -17,6 +17,7 @@
   margin: 0;
   opacity: 0;
   z-index: 2;
+  cursor: pointer;
 }
 
 .control-switch__input+.control-switch__label:before {
@@ -32,6 +33,24 @@
   background-color: $grey-500;
 
   transition: all 0.3s;
+}
+
+.control-switch__input:not(.control-switch__input:disabled):hover+.control-switch__label:before,
+.control-switch__input:not(.control-switch__input:disabled):focus+.control-switch__label:before {
+  border: 2px solid $primary-400;
+  background-color: $primary-700;
+}
+
+.control-switch__input:disabled+.control-switch__label:before {
+  background-color: $grey-400;
+}
+
+.control-switch__input:disabled:checked+.control-switch__label::before {
+  background-color: $grey-400;
+}
+
+.control-switch__input:disabled+.control-switch__label {
+  color: $grey-400;
 }
 
 .control-switch__input+.control-switch__label:after {
