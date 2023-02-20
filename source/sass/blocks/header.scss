@@ -32,11 +32,12 @@
 }
 
 .header__user-menu {
-  max-width: 200px;
+  @media (max-width: ($medium - 1px)) {
+    max-width: 200px;
+  }
 
   @media (min-width: $large) {
     min-width: 241px;
-    gap: 20px;
   }
 }
 

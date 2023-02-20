@@ -22,8 +22,8 @@
   }
 }
 
-.control__input:not(.control__input:disabled):hover + .control__label::before,
-.control__input:not(.control__input:disabled):focus + .control__label::before {
+.control__input:hover + .control__label::before,
+.control__input:focus + .control__label::before {
   border-color: $primary-400;
 }
 

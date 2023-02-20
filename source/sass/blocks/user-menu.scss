@@ -3,7 +3,7 @@
   flex-wrap: wrap;
 
   @media (min-width: $large) {
-    justify-content: space-between;
+    gap: 20px;
   }
 }
 
@@ -107,3 +107,11 @@
     box-shadow: none;
   }
 }
+
+// .user-menu__item {
+//   @media (min-width: $large) {
+//     &:first-child {
+//       margin-left: -20px;
+//     }
+//   }
+// }
