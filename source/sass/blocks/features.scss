@@ -48,9 +48,9 @@
     text-align: start;
   }
 
-    @media (min-width: $large) {
-      text-align: center;
-    }
+  @media (min-width: $large) {
+    text-align: center;
+  }
 }
 
 .features__description {
@@ -63,9 +63,9 @@
     text-align: start;
   }
 
-    @media (min-width: $large) {
-      text-align: center;
-    }
+  @media (min-width: $large) {
+    text-align: center;
+  }
 }
 
 .features__list {
@@ -94,11 +94,11 @@
     background-position: top left;
   }
 
-    @media (min-width: $large) {
-      padding-top: 78px;
-      padding-left: 0;
-      background-position: top center;
-    }
+  @media (min-width: $large) {
+    padding-top: 78px;
+    padding-left: 0;
+    background-position: top center;
+  }
 
   &:not(:last-child) {
     margin-bottom: 33px;

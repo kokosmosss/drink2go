@@ -36,6 +36,12 @@
     padding-left: 0;
     margin: 0 0 30px;
   }
+
+  &:last-child {
+    @media (min-width: $medium) {
+      margin-left: 5px;
+    }
+  }
 }
 
 .filter-form__area {
@@ -48,6 +54,7 @@
 
 .filter-form__buttons {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   gap: 24px;
@@ -58,13 +65,17 @@
     flex-direction: row;
     justify-content: center;
     gap: 30px;
+
     padding-top: 10px;
-    margin: 0 0 37px;
+    padding-right: 56px;
+    margin: 0 0 41px;
   }
 
   @media (min-width: $large) {
+    gap: 20px;
     margin: 0;
     padding-top: 0;
+    padding-right: 0;
   }
 }
 
@@ -78,7 +89,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   @media (min-width: $medium) {
     justify-content: flex-end;
@@ -87,7 +98,7 @@
 
   @media (min-width: $large) {
     position: absolute;
-    top: 115px;
+    top: 122px;
     right: 0;
     margin-bottom: 30px;
   }

@@ -1,5 +1,6 @@
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   @media (min-width: $medium) {
@@ -28,21 +29,21 @@
     }
   }
 
-    &:hover:not(.pagination__button--current),
-    &:focus:not(.pagination__button--current) {
-      color: $white;
-      background-color: $primary-400;
-    }
+  &:hover:not(.pagination__button--current),
+  &:focus:not(.pagination__button--current) {
+    color: $white;
+    background-color: $primary-400;
+  }
 
-    &:active:not(.pagination__button--current) {
-      color: $white;
-      background-color: $primary-600;
-    }
+  &:active:not(.pagination__button--current) {
+    color: $white;
+    background-color: $primary-600;
+  }
 
-    &:disabled:not(.pagination__button--current) {
-      color: $white;
-      background-color: $grey-400;
-    }
+  &:disabled:not(.pagination__button--current) {
+    color: $white;
+    background-color: $grey-400;
+  }
 }
 
 .pagination__button--current {

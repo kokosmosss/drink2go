@@ -34,6 +34,7 @@
 
   @media (min-width: $medium) {
     padding: 8px 4px;
+    font-size: 14px;
   }
 
   @media (min-width: $large) {
@@ -47,6 +48,10 @@
   color: $primary-500;
 
   background-color: $white;
+
+  @media (min-width: $medium) {
+    padding: 8px 4px;
+  }
 
   @media (min-width: $large) {
     padding: 10px 8px;

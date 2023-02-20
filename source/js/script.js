@@ -40,32 +40,26 @@ const swiper = new Swiper('.swiper', {
 let mapSection = document.querySelector('.map');
 mapSection.classList.remove('map--no-js');
 
-const SHOP_LAT = 59.968266;
-const SHOP_LNG = 30.3174089;
-const ZOOM = 16;
-const TILELAYER_URL = 'https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=HMfyPUotkQhoWYIXN1mz';
+const SHOP_LAT = 59.968321;
+const SHOP_LNG = 30.317462;
+const ZOOM = 20;
 
 const map = L.map('map').setView([SHOP_LAT, SHOP_LNG], ZOOM);;
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-L.tileLayer(TILELAYER_URL, {
-  crossOrigin: true
 }).addTo(map);
 
 const mainPinIcon = L.icon({
   iconUrl: "../img/map-pin.svg",
-  iconSize: [39, 50],
+  iconSize: [38, 50],
   iconAnchor: [18, 50],
 });
 
 const mainPin = L.marker(
   {
-    lat: SHOP_LAT,
-    lng: SHOP_LNG,
+    lat: 59.968314,
+    lng: 30.317533,
   },
   {
     draggable: true,

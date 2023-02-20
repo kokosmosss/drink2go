@@ -21,9 +21,19 @@
     background-color: $white;
     z-index: 2;
   }
+
+  @media (min-width: $medium) {
+    max-width: 400px;
+  }
+
+  @media (min-width: $large) {
+    max-width: 550px;
+  }
 }
 
 .header__user-menu {
+  max-width: 200px;
+
   @media (min-width: $large) {
     min-width: 241px;
     gap: 20px;

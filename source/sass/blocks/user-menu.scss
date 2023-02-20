@@ -71,7 +71,7 @@
     background-color: $secondary;
   }
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 24px;

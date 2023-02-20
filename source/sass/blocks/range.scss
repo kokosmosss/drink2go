@@ -37,7 +37,7 @@
 
   &:hover,
   &:focus {
-    &:before {
+    &::before {
       content: "";
       position: absolute;
       top: calc(50% - 8px);
@@ -50,7 +50,7 @@
   }
 
   &:active {
-    &:before {
+    &::before {
       background-color: $primary-500;
     }
   }
@@ -84,6 +84,7 @@
 .range__inputs {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .range__input {
