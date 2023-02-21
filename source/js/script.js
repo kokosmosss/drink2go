@@ -1,5 +1,3 @@
-/* в этот файл добавляет скрипты*/
-
 /*Menu*/
 
 const onenMenu = () => {
@@ -34,7 +32,6 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   }
 });
-
 
 /*Map*/
 let mapSection = document.querySelector('.map');

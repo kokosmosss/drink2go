@@ -17,6 +17,8 @@
   &:focus {
     color: $primary-500;
     background-color: $secondary;
+    border: none;
+    outline: none;
   }
 
   &:active {

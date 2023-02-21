@@ -67,4 +67,15 @@
   background-image: url("../../img/icons/stack.svg#tel");
   background-repeat: no-repeat;
   background-size: 13px 16px;
+
+  &:hover {
+    color: $primary-400;
+  }
+
+  &:focus,
+  &:active {
+    color: $primary-600;
+    border: none;
+    outline: none;
+  }
 }

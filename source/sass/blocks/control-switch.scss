@@ -35,8 +35,8 @@
   transition: all 0.3s;
 }
 
-.control-switch__input:not(.control-switch__input:disabled):hover + .control-switch__label::before,
-.control-switch__input:not(.control-switch__input:disabled):focus + .control-switch__label::before {
+.control-switch__input:not(:disabled):hover + .control-switch__label::before,
+.control-switch__input:not(:disabled):focus + .control-switch__label::before {
   border: 2px solid $primary-400;
   background-color: $primary-700;
 }

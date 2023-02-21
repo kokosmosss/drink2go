@@ -33,6 +33,8 @@
   &:focus:not(.pagination__button--current) {
     color: $white;
     background-color: $primary-400;
+    border: none;
+    outline: none;
   }
 
   &:active:not(.pagination__button--current) {

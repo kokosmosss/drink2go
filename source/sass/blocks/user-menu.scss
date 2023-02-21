@@ -38,6 +38,9 @@
   &:active {
     background-color: $secondary;
 
+    border: none;
+    outline: none;
+
     @media (max-width: ($medium - 1px)) {
       color: $black;
     }
@@ -69,6 +72,8 @@
   &:focus,
   &:active {
     background-color: $secondary;
+    border: none;
+    outline: none;
   }
 
   &::before {

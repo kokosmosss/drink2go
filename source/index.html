@@ -15,7 +15,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin="">
   <link rel="stylesheet" href="css/style.css">
+
   <link rel="preload" href="fonts/montserrat-400.woff2" type="woff/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-600.woff2" type="woff/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-700.woff2" type="woff/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -73,7 +76,7 @@
       </li>
       <li class="user-menu__item">
         <button class="user-menu__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Открыть меню.</span>
         </button>
       </li>
     </ul>
@@ -98,7 +101,7 @@
               <source type="image/webp"
                 srcset="img/promo/decaf-flat-white-mobile.webp 1x, img/promo/decaf-flat-white-mobile@2x.webp 2x">
               <img class="promo-card__image" src="img/promo/decaf-flat-white-mobile.png"
-                srcset="img/promo/decaf-flat-white-mobile@2x.png 2x" width="280" height="280" alt="Decaf Flat White">
+                srcset="img/promo/decaf-flat-white-mobile@2x.png 2x" width="280" height="280" alt="Decaf Flat White.">
             </picture>
             <div class="promo-card__flex-wrapper">
               <span class="promo-card__bange bange">Новинка!</span>
@@ -109,7 +112,7 @@
                 для&nbsp;расслабления после тяжёлого рабочего дня
               </p>
               <div class="promo-card__order-wrapper">
-                <span class="promo-card__old-price">295₽</span>
+                <del class="promo-card__old-price">295₽</del>
                 <span class="promo-card__new-price">225₽</span>
                 <a class="promo-card__button button" href="#">Заказать</a>
               </div>
@@ -130,7 +133,7 @@
               <source type="image/webp"
                 srcset="img/promo/lavander-latte-mobile.webp 1x, img/promo/lavander-latte-mobile@2x.webp 2x">
               <img class="promo-card__image" src="img/promo/lavander-latte-mobile.png"
-                srcset="img/promo/lavander-latte-mobile@2x.png 2x" width="280" height="280" alt="Lavander Latte">
+                srcset="img/promo/lavander-latte-mobile@2x.png 2x" width="280" height="280" alt="Lavander Latte.">
             </picture>
             <div class="promo-card__flex-wrapper">
               <span class="promo-card__bange bange">Новинка!</span>
@@ -142,7 +145,7 @@
                 Радужных гор
               </p>
               <div class="promo-card__order-wrapper">
-                <span class="promo-card__old-price">285₽</span>
+                <del class="promo-card__old-price">285₽</del>
                 <span class="promo-card__new-price">265₽</span>
                 <a class="promo-card__button button" href="#">Заказать</a>
               </div>
@@ -163,7 +166,7 @@
               <source type="image/webp"
                 srcset="img/promo/triple-espresso-mobile.webp 1x, img/promo/triple-espresso-mobile@2x.webp 2x">
               <img class="promo-card__image" src="img/promo/triple-espresso-mobile.png"
-                srcset="img/promo/triple-espresso-mobile@2x.png 2x" width="280" height="280" alt="Triple Espresso">
+                srcset="img/promo/triple-espresso-mobile@2x.png 2x" width="280" height="280" alt="Triple Espresso.">
             </picture>
             <div class="promo-card__flex-wrapper">
               <span class="promo-card__bange bange">Новинка!</span>
@@ -175,7 +178,7 @@
                 бодрость
               </p>
               <div class="promo-card__order-wrapper">
-                <span class="promo-card__old-price">395₽</span>
+                <del class="promo-card__old-price">395₽</del>
                 <span class="promo-card__new-price">365₽</span>
                 <a class="promo-card__button button" href="#">Заказать</a>
               </div>
@@ -184,10 +187,10 @@
         </li>
       </ul>
       <button class="promo__button swiper-button-prev" type="button">
-        <span class="visually-hidden">Предыдущий слайд</span>
+        <span class="visually-hidden">Предыдущий слайд.</span>
       </button>
       <button class="promo__button swiper-button-next" type="button">
-        <span class="visually-hidden">Следующий слайд</span>
+        <span class="visually-hidden">Следующий слайд.</span>
       </button>
       <div class="promo__pagination swiper-pagination"></div>
     </section>
@@ -244,10 +247,10 @@
                   </button>
                 </div>
                 <div class="range__inputs">
-                  <label class="visually-hidden" for="range-input-left">от</label>
+                  <label class="visually-hidden" for="range-input-left">от.</label>
                   <input class="range__input" id="range-input-left" type="number" placeholder="0" name="min-price">
                   <span class="range__dash"></span>
-                  <label class="visually-hidden" for="range-input-right">до</label>
+                  <label class="visually-hidden" for="range-input-right">до.</label>
                   <input class="range__input" id="range-input-right" type="number" placeholder="900" name="max-price">
                 </div>
               </div>
@@ -302,7 +305,7 @@
           <div class="filter-form__select-group select-group">
             <label class="select-group__title" for="sort">Сортировка:</label>
             <select class="select-group__select" name="sort" id="sort">
-              <option class="select-group__option" value="default" selected disabled>по умолчанию</option>
+              <option class="select-group__option" value="default" selected>по умолчанию</option>
               <option class="select-group__option" value="expensive">сначала дорогие</option>
               <option class="select-group__option" value="cheap">сначала дешёвые</option>
               <option class="select-group__option" value="high-rate">высокий рейтинг</option>
@@ -317,7 +320,7 @@
                   srcset="img/catalog/specialty-coffee-white.webp 1x, img/catalog/specialty-coffee-white@2x.webp 2x">
                 <img class="catalog-card__image" src="img/catalog/specialty-coffee-white.png"
                   srcset="img/catalog/specialty-coffee-white@2x.png 2x" width="130" height="188"
-                  alt="Specialty Coffee White">
+                  alt="Specialty Coffee White.">
               </picture>
               <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
             </a>
@@ -337,7 +340,7 @@
                   srcset="img/catalog/specialty-coffee-violet.webp 1x, img/catalog/specialty-coffee-violet@2x.webp 2x">
                 <img class="catalog-card__image" src="img/catalog/specialty-coffee-violet.png"
                   srcset="img/catalog/specialty-coffee-violet@2x.png 2x" width="130" height="188"
-                  alt="Specialty Coffee Violet">
+                  alt="Specialty Coffee Violet.">
               </picture>
               <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
             </a>
@@ -357,7 +360,7 @@
                   srcset="img/catalog/specialty-coffee-black.webp 1x, img/catalog/specialty-coffee-black@2x.webp 2x">
                 <img class="catalog-card__image" src="img/catalog/specialty-coffee-white.png"
                   srcset="img/catalog/specialty-coffee-black@2x.png 2x" width="130" height="188"
-                  alt="Specialty Coffee Black">
+                  alt="Specialty Coffee Black.">
               </picture>
               <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
             </a>
@@ -377,7 +380,7 @@
                   srcset="img/catalog/specialty-coffee-purple.webp 1x, img/catalog/specialty-coffee-purple@2x.webp 2x">
                 <img class="catalog-card__image" src="img/catalog/specialty-coffee-purple.png"
                   srcset="img/catalog/specialty-coffee-purple@2x.png 2x" width="130" height="188"
-                  alt="Specialty Coffee Purple">
+                  alt="Specialty Coffee Purple.">
               </picture>
               <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
             </a>
@@ -397,7 +400,7 @@
                   srcset="img/catalog/specialty-coffee-brown.webp 1x, img/catalog/specialty-coffee-brown@2x.webp 2x">
                 <img class="catalog-card__image" src="img/catalog/specialty-coffee-brown.png"
                   srcset="img/catalog/specialty-coffee-brown@2x.png 2x" width="130" height="188"
-                  alt="Specialty Coffee Brown">
+                  alt="Specialty Coffee Brown.">
               </picture>
               <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
             </a>
@@ -417,7 +420,7 @@
                   srcset="img/catalog/specialty-coffee-yellow.webp 1x, img/catalog/specialty-coffee-yellow@2x.webp 2x">
                 <img class="catalog-card__image" src="img/catalog/specialty-coffee-yellow.png"
                   srcset="img/catalog/specialty-coffee-yellow@2x.png 2x" width="130" height="188"
-                  alt="Specialty Coffee Yellow">
+                  alt="Specialty Coffee Yellow.">
               </picture>
               <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
             </a>
@@ -483,7 +486,7 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <use xlink:href="img/icons/stack.svg#vk" />
             </svg>
-            <span class="visually-hidden">Мы в Вконтакте</span>
+            <span class="visually-hidden">Мы в Вконтакте.</span>
           </a>
         </li>
         <li class="social__item">
@@ -491,7 +494,7 @@
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
               <use xlink:href="img/icons/stack.svg#pinterest" />
             </svg>
-            <span class="visually-hidden">Мы в Pinterest</span>
+            <span class="visually-hidden">Мы в Pinterest.</span>
           </a>
         </li>
         <li class="social__item">
@@ -499,7 +502,7 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <use xlink:href="img/icons/stack.svg#ok" />
             </svg>
-            <span class="visually-hidden">Мы в Одноклассниках</span>
+            <span class="visually-hidden">Мы в Одноклассниках.</span>
           </a>
         </li>
       </ul>

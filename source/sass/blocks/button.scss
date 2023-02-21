@@ -17,6 +17,8 @@
   &:hover,
   &:focus {
     background-color: $primary-400;
+    border: none;
+    outline: none;
   }
 
   &:active {
@@ -55,6 +57,12 @@
 
   @media (min-width: $large) {
     padding: 10px 8px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
   }
 
   &:disabled {

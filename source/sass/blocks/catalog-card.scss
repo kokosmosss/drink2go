@@ -6,6 +6,10 @@
   @media (min-width: $medium) {
     padding: 50px 31px 29px;
   }
+
+  &:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  }
 }
 
 .catalog-card__link {
