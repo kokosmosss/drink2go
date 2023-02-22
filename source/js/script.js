@@ -37,11 +37,13 @@ const swiper = new Swiper('.swiper', {
 let mapSection = document.querySelector('.map');
 mapSection.classList.remove('map--no-js');
 
-const SHOP_LAT = 59.968321;
-const SHOP_LNG = 30.317462;
-const ZOOM = 20;
+const MAP_LAT = 59.96842;
+const MAP_LNG = 30.31755;
+const SHOP_LAT = 59.96835;
+const SHOP_LNG = 30.31763;
+const ZOOM = 18;
 
-const map = L.map('map').setView([SHOP_LAT, SHOP_LNG], ZOOM);;
+const map = L.map('map').setView([MAP_LAT, MAP_LNG], ZOOM);;
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -50,13 +52,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const mainPinIcon = L.icon({
   iconUrl: "../img/map-pin.svg",
   iconSize: [38, 50],
-  iconAnchor: [18, 50],
+  iconAnchor: [19, 50],
 });
 
 const mainPin = L.marker(
   {
-    lat: 59.968314,
-    lng: 30.317533,
+    lat: SHOP_LAT,
+    lng: SHOP_LNG,
   },
   {
     draggable: true,

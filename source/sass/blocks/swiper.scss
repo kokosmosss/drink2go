@@ -112,13 +112,13 @@
 }
 
 .swiper-pagination-bullet {
+  border-radius: 0;
+
   &:hover,
   &:focus {
-    color: $primary-700;
-  }
-
-  &:active {
-    color: $primary-500;
+    background-color: $primary-700;
+    border: none;
+    outline: none;
   }
 
   @media (min-width: $large) {
@@ -131,5 +131,4 @@
 
 .swiper-pagination-bullet-active {
   background-color: $primary-500;
-  border-radius: 0;
 }

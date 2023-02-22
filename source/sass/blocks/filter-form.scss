@@ -41,6 +41,10 @@
     @media (min-width: $medium) {
       margin-left: 5px;
     }
+
+    @media (min-width: $large) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -98,7 +102,7 @@
 
   @media (min-width: $large) {
     position: absolute;
-    top: 122px;
+    top: 118px;
     right: 0;
     margin-bottom: 30px;
   }

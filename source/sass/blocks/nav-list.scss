@@ -27,6 +27,8 @@
   &:hover,
   &:focus {
     color: $primary-500;
+    border: none;
+    outline: none;
   }
 
   &:active {
