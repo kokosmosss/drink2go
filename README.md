@@ -4,7 +4,6 @@ Drink2Go — интернет-магазин по продаже кофейны�
 <img alt="Превью сайта" src="https://up.htmlacademy.ru/assets/professions/frontender/14/grading/projects/drink2go/image.jpg">
 
 * Стек: HTML, SCSS, JS, Swiper
-* Проект опубликован: https://kokosmosss.github.io/smart-device/  
 
 ## Краткая инструкция по работе
 
