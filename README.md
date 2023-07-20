@@ -4,6 +4,7 @@ Drink2Go — интернет-магазин по продаже кофейны�
 <img alt="Превью сайта" src="https://up.htmlacademy.ru/assets/professions/frontender/14/grading/projects/drink2go/image.jpg">
 
 * Стек: HTML, SCSS, JS, Swiper
+* Выполнен за 27ч.
 
 ## Краткая инструкция по работе
 
